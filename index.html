@@ -7,48 +7,63 @@
 		http://www.spiritone.com/~brucem/trivxf.htm
 		http://ezri.50megs.com/tagline/tagline.html
 		-->
+		<meta charset="utf-8">
 		<title>I WANT TO BELIEVE</title>
 		<style type="text/css" media="screen"> 
-		p { 
+		body { 
 			margin: 2px 20px;
+			font-family: sans-serif;
 			font-size: 120px;
 			font-weight: bold;
+			text-transform: uppercase;
 		}
 		</style>
 	</head>
 	<body>
-		<script type="type/javascript">
-			function random_number_in_range( array ) {
-				return Math.floor( Math.random() * array.length );
-			}
-
-			var tagline = [
-				'ƒê &#8216;AANêêGîî &#8216;çHOOT&#8217;ƒ',
-				'I WANT TO BELIEVE',
-				'FIGHT THE FUTURE',
-				'DIO TI AMA',
-				'THEY’RE WATCHING',
-				'EREHT TUO SI HTURT EHT',
-				'NOTHING IMPORTANT HAPPENED TODAY',
-				'BELIEVE TO UNDERSTAND',
-				'AMOR FATI',
-				'IN THE BIG INNING',
-				'DIE WAHRHEIT IST IRGENDWO DA DRAUßEN',
-				'THE END',
-				'RESIST OR SERVE',
-				'ALL LIES LEAD TO THE TRUTH',
-				'BELIEVE THE LIE',
-				'E PUR SI MUOVE',
-				'DECEIVE INVEIGLE OBFUSCATE',
-				'EVERYTHING DIES',
-				'APOLOGY IS POLICY',
-				'DENY EVERYTHING',
-				'TRUST NO ONE',
-				'THE TRUTH IS OUT THERE'
-			];
-
-			console.log( random_number_in_range( tagline ) );
+		<script type="text/javascript">
+			var X = {
+				init : function() {
+					var key = this.random( this.tagline )
+					;
+					this.write( this.tagline[key] );
+				},
+				tagline : [
+					'Æ’Ãª â€˜AANÃªÃªGÃ®Ã® â€˜Ã§HOOTâ€™Æ’',
+					'I WANT TO BELIEVE',
+					'FIGHT THE FUTURE',
+					'DIO TI AMA',
+					'THEYâ€™RE WATCHING',
+					'EREHT TUO SI HTURT EHT',
+					'NOTHING IMPORTANT HAPPENED TODAY',
+					'BELIEVE TO UNDERSTAND',
+					'AMOR FATI',
+					'IN THE BIG INNING',
+					'DIE WAHRHEIT IST IRGENDWO DA DRAUÃŸEN',
+					'THE END',
+					'RESIST OR SERVE',
+					'ALL LIES LEAD TO THE TRUTH',
+					'BELIEVE THE LIE',
+					'E PUR SI MUOVE',
+					'DECEIVE INVEIGLE OBFUSCATE',
+					'EVERYTHING DIES',
+					'APOLOGY IS POLICY',
+					'DENY EVERYTHING',
+					'TRUST NO ONE',
+					'THE TRUTH IS OUT THERE'
+				],
+				random : function( array ) {
+					return Math.floor( Math.random() * array.length );
+				},
+				write : function( tagline ) {
+					var a = document.createElement('a'),
+						text = document.createTextNode(tagline)
+					;
+					a.href = document.URL;
+					a.appendChild(text);
+					document.body.appendChild(a);
+				}
+			};
+			X.init();
 		</script>
-		<p><a href="/x/"></p></a></p>
 	</body>
 </html>
